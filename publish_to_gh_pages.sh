@@ -66,7 +66,8 @@ else
 fi
 
 # Syncing the gh-pages branch with the folder content
-rsync -av --delete --exclude '.git' "$FOLDER/" "$TMP_REPO_DIR/"
+# rsync -av --delete --exclude '.git' "$FOLDER/" "$TMP_REPO_DIR/"
+rsync -av --exclude '.git' "$FOLDER/" "$TMP_REPO_DIR/"
 ls -la "$TMP_REPO_DIR"
 echo "made it here 1"
 
